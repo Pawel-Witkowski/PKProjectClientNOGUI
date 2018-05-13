@@ -1,5 +1,5 @@
 import unittest
-import RSA
+import Cryptography
 import Math_Modules
 
 
@@ -19,11 +19,11 @@ class TestMath_Modules(unittest.TestCase):
 class TestRSA(unittest.TestCase):
 
     def testCoprime(self):
-        self.myRSA = RSA.RSA()
+        self.myRSA = Cryptography.RSA()
         self.assertEqual(self.myRSA.e * self.myRSA.d % self.myRSA.fiFunction(), 1, "not coprime!")
 
     def testEncodingDecoding(self):
-        self.myRSA = RSA.RSA()
+        self.myRSA = Cryptography.RSA()
         self.assertEqual(
             self.myRSA.decryption(self.myRSA.encryption(651651)), 651651, "RSA doesnt work"
         )
