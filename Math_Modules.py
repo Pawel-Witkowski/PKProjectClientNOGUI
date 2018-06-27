@@ -1,10 +1,9 @@
 def extended_euclid_gcd(a, b):
     """
-    Returns a list `result` of size 3 where:
-    Referring to the equation ax + by = gcd(a, b)
-        result[0] is gcd(a, b)
-        result[1] is x
-        result[2] is y
+    Equation ax + by = gcd(a, b)
+    result[0] is gcd(a, b)
+    result[1] is x
+    result[2] is y
     """
     s = 0; old_s = 1
     t = 1; old_t = 0
@@ -20,7 +19,6 @@ def extended_euclid_gcd(a, b):
 
 def modulo_multiplicative_inverse(A, M):
     """
-    Assumes that A and M are co-prime
     Returns multiplicative modulo inverse of A under M
     """
 

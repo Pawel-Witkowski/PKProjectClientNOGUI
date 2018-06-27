@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/SocketTestClient.iml" filepath="$PROJECT_DIR$/.idea/SocketTestClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../PKProjectServerNOGUI-kopia/.idea/SocketTestServer.iml" filepath="$PROJECT_DIR$/../PKProjectServerNOGUI-kopia/.idea/SocketTestServer.iml" />
       <module fileurl="file://$PROJECT_DIR$/../SocketTestServer/.idea/SocketTestServer.iml" filepath="$PROJECT_DIR$/../SocketTestServer/.idea/SocketTestServer.iml" />
     </modules>
   </component>

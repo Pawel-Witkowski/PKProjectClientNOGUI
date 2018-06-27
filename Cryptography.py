@@ -35,19 +35,35 @@ class AESCipher:
 
 class RSA:
     def __init__(self):
-        self.p = 33478071698956898786044169848212690817704794983713768568912431388982883793878002287614711652531743087737814467999489
-        self.q = 36746043666799590428244633799627952632279158164343087642676032283815739666511279233373417143396810270092798736308917
-        self.N = self.p * self.q
-        self.e = self.generatePublic()
-        self.d = self.generatePrivate()
+        self.p = 0
+        self.q = 0
+        self.N = 0
+        self.e = 0
+        self.d = 0
+
+    def setRSA(self, p, q, N, e, d):
+        self.p = p
+        self.q = q
+        self.N = N
+        self.e = e
+        self.d = d
+
+    def setPublicKey(self, N, e):
+        self.N = N
+        self.e = e
+
+    def setPrivateKey(self, p, q, d):
+        self.p = p
+        self.q = q
+        self.d = d
 
     def generatePublic(self):
-        return 608304910142350396698363327001812754362885774565113507467145687232890587785014631394173069824500094829807307054273835218156320703304105285660931778433496412765294560162930708921682965665533072584084877545594795640400563105158139815
-        # fiValue = self.fiFunction()
-        # checkedE = random.randrange(2, fiValue)
-        # while gcd(checkedE, fiValue) != 1:
-        #     checkedE = random.randrange(2, fiValue)
-        # return checkedE
+        # return 608304910142350396698363327001812754362885774565113507467145687232890587785014631394173069824500094829807307054273835218156320703304105285660931778433496412765294560162930708921682965665533072584084877545594795640400563105158139815
+        fiValue = self.fiFunction()
+        checkedE = random.randrange(2, fiValue)
+        while gcd(checkedE, fiValue) != 1:
+            checkedE = random.randrange(2, fiValue)
+        return checkedE
 
     def generatePrivate(self):
         return Math_Modules.modulo_multiplicative_inverse(self.e, self.fiFunction())
